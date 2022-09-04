@@ -14,37 +14,37 @@ public:
     deg grado;
 
     /**
-     * Constructor de la clase Monomio.
+     * Constructor of the class Monomio.
      */
     Monomio(firstElement fELement, deg grado);
 
     /**
-     * Función que indica si el monomio es cero.
-     * @return true si el monomio es cero, false en caso contrario.
+     * Function that indicates if the monomio is zero.
+     * @return true if the monomio is zero, false otherwise.
      */
     bool null() const;
 
     /**
-     * Función que determina si el monomio es constante.
-     * @return true si el monomio es constante, false en caso contrario.
+     * Function that determines if the monomio is constant.
+     * @return true if the monomio is constant, false otherwise.
      */
     bool constant() const;
 
     /**
-     * Función que calcula el valor del monomio para un valor de x.
-     * @return El valor del monomio para un valor de x.
+     * Function that calculate the value of the monomio for a value of x.
+     * @return the value of the monomio for a value of x.
      */
     double calculate(double x) const;
 
     /**
-     * Función que calcula el derivado del monomio.
-     * @return El derivado del monomio.
+     * Function that calculate the derivative of the monomio.
+     * @return the derivative of the monomio.
      */
     Monomio derv() const;
 
     /**
-     * Operador de comparaciones de igualdad y ordenamiento.
-     * @param otro El monomio comparado.
+     * Operator of comparisons of equality and ordering.
+     * @param another monomio compared.
      */
     auto operator<=>(const Monomio &otro) const
     {
@@ -54,16 +54,16 @@ public:
     }
 
     /**
-     * Operador de comparaciones de igualdad.
-     * @param otro El polinomio comparado.
+     * Operator of comparisons of equality.
+     * @param another monomio compared.
      */
     bool operator==(const Monomio &otro) const = default;
 
     /**
-     * Operador de salida.
-     * @param out El stream de salida.
-     * @param monomio El monomio de salida.
-     * @return El stream de salida.
+     * Exit operator.
+     * @param the output stream.
+     * @param monomio the output monomio.
+     * @return the output stream.
      */
     friend std::ostream& operator<<(std::ostream& out, const Monomio& monomio);
 };
